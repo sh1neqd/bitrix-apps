@@ -18,8 +18,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
     --install-dir=/usr/local/bin
 
-# Настройка рабочей директории
 WORKDIR /var/www
 
-# Запуск встроенного сервера PHP
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
+CMD ["php", "-S", "0.0.0.0:9000", "-t", "public"]
