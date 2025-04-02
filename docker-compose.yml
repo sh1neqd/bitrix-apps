@@ -12,7 +12,7 @@ services:
         container_name: bitrix_app
         environment:
             DB_HOST: db
-            DB_PORT: 5432
+            DB_PORT: 5431
             DB_DATABASE: ${DB_DATABASE}
             DB_USERNAME: ${DB_USERNAME}
             DB_PASSWORD: ${DB_PASSWORD}
@@ -27,7 +27,7 @@ services:
             POSTGRES_USER: ${DB_USERNAME}
             POSTGRES_PASSWORD: ${DB_PASSWORD}
         ports:
-            - "5432:5432"
+            - "5431:5431"
         container_name: bitrix_db
 
 volumes:
