@@ -1,7 +1,12 @@
 <?php
 
-use App\Http\Controllers\Api\ChecklistController;
+use App\Http\Controllers\Api\ChecklistSubmissionController;
+use App\Http\Controllers\Api\DirectionController;
+use App\Http\Controllers\Api\ErrorController;
+use App\Http\Controllers\Api\ManagerController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\ChecklistController;
+
 
 Route::get('/directions', [DirectionController::class, 'index']);
 Route::post('/directions', [DirectionController::class, 'store']);
@@ -17,3 +22,5 @@ Route::post('/checklists', [ChecklistController::class, 'store']);
 Route::delete('/checklists/{id}', [ChecklistController::class, 'destroy']);
 
 Route::post('/evaluations', [ChecklistSubmissionController::class, 'store']);
+Route::get('/evaluations/{managerName}', [ChecklistSubmissionController::class, 'indexByManager']);
+
